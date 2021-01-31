@@ -13,7 +13,7 @@ var Fatal = log.Fatal
 
 
 func init() {
-	if logLevel,err :=log.ParseLevel(os.Getenv("LOG_LEVEL"));err !=nil{
+	if logLevel,err :=log.ParseLevel(os.Getenv("LogLevel"));err !=nil{
 		log.SetLevel(log.InfoLevel)
 	}else{
 		log.SetLevel(logLevel)
@@ -26,3 +26,4 @@ func init() {
 	})
 	log.SetReportCaller(true)
 }
+
